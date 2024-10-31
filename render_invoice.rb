@@ -19,9 +19,9 @@ if client_slug.nil?
   exit 1
 end
 
-# check first for _clientelle.yml and then for _config.yml
-config_path = if File.exist?('_clientelle.yml')
-  '_clientelle.yml'
+# check first for _clientele.yml and then for _config.yml
+config_path = if File.exist?('_clientele.yml')
+  '_clientele.yml'
 else
   '_config.yml'
 end

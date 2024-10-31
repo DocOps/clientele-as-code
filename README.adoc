@@ -1,4 +1,4 @@
-= Clientelle-as-Code
+= Clientele-as-Code
 :toc: macro
 
 Use Git and docs-as-code to track and manage freelance/consulting projects, clients, and associated payments and invoicing.
@@ -12,7 +12,7 @@ toc::[]
 
 == Features and Purpose
 
-Here is what the Clientelle-as-Code project can already enable:
+Here is what the Clientele-as-Code project can already enable:
 
 * Store client metadata and payment/invoice records in a *YAML* file.
 * Generate invoices from the YAML sources:
@@ -22,9 +22,9 @@ Here is what the Clientelle-as-Code project can already enable:
 
 See the demo PDF artifacts:
 
-* link:https://github.com/DocOps/clientelle-as-code/blob/demo/clients/acme-corporation/invoices/hardsoft-invoice-acme-corporation-001-2024-09-01-PAID.pdf[Invoice 001 (paid)]
-* link:https://github.com/DocOps/clientelle-as-code/blob/demo/clients/acme-corporation/invoices/hardsoft-invoice-acme-corporation-002-2024-10-01-OVERDUE.pdf[Invoice 002 (large, overdue)]
-* link:https://github.com/DocOps/clientelle-as-code/blob/demo/clients/acme-corporation/invoices/hardsoft-invoice-acme-corporation-003-2024-11-01.pdf[Invoice 003 (new)]
+* link:https://github.com/DocOps/clientele-as-code/blob/demo/clients/acme-corporation/invoices/hardsoft-invoice-acme-corporation-001-2024-09-01-PAID.pdf[Invoice 001 (paid)]
+* link:https://github.com/DocOps/clientele-as-code/blob/demo/clients/acme-corporation/invoices/hardsoft-invoice-acme-corporation-002-2024-10-01-OVERDUE.pdf[Invoice 002 (large, overdue)]
+* link:https://github.com/DocOps/clientele-as-code/blob/demo/clients/acme-corporation/invoices/hardsoft-invoice-acme-corporation-003-2024-11-01.pdf[Invoice 003 (new)]
 
 === Why Do Invoices This Way?
 
@@ -53,13 +53,13 @@ The YAML files as currently implemented should be fairly intuitive for "`less-te
 While they can be "`broken,`" so to speak, this whole system is safe for novice users -- it does not automatically send anything to clients.
 If something is broken, you'll know it before your clients see anything.
 
-It's not yet clear if Clientelle-as-Code will make invoicing more *collaborative for large teams*, but my hope is that it will offer all the advantages that source-control systems have provided for collectively managing product codebases.
+It's not yet clear if Clientele-as-Code will make invoicing more *collaborative for large teams*, but my hope is that it will offer all the advantages that source-control systems have provided for collectively managing product codebases.
 I can imagine a situation where multiple workers at a firm can track their time on a given project, and an additional worker can handle the actual generating and management of invoices, all from a central repository.
 
 
 == Setup
 
-This is a quickstart guide to getting up and running with Clientelle-as-Code.
+This is a quickstart guide to getting up and running with Clientele-as-Code.
 More thorough documentation will be a feature of <<development,further development>>, if this MVP is successful.
 
 === Prerequisites
@@ -85,7 +85,7 @@ Docker requires a proper Unix-like environment, so either MacOS or Windows with 
 
 . Clone the repository.
 +
- git clone https://github.com/DocOps/clientelle-as-code.git invoices
+ git clone https://github.com/DocOps/clientele-as-code.git invoices
 
 . Change to the project directory.
 +
@@ -93,7 +93,7 @@ Docker requires a proper Unix-like environment, so either MacOS or Windows with 
 
 . Build the Docker image.
 +
- docker build -t clientelle:latest .
+ docker build -t clientele:latest .
 
 . Make the `invoice.sh` script executable.
 +
@@ -178,12 +178,12 @@ If you already have a directory containing client directories, you can integrate
 Clone to local::
 If your existing directory is _not_ already a Git repository, you can clone the repository directly into it.
 +
- git clone https://github.com/DocOps/clientelle-as-code.git .
+ git clone https://github.com/DocOps/clientele-as-code.git .
 
 Download and extract to local::
 If you just want to add these files to an existing repository, be sure changes are committed and/or the path is backed up:
 +
- wget https://github.com/DocOps/clientelle-as-code/archive/refs/heads/main.zip && unzip main.zip && mv clientelle-as-code-main/* . && rm -rf clientelle-as-code-main main.zip README.adoc spec
+ wget https://github.com/DocOps/clientele-as-code/archive/refs/heads/main.zip && unzip main.zip && mv clientele-as-code-main/* . && rm -rf clientele-as-code-main main.zip README.adoc spec
 
 Integration into an existing codebase/repo should be made far more elegant if this project is released as a proper Ruby gem (see <<development>>).
 

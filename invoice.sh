@@ -8,4 +8,4 @@ fi
 CLIENT_SLUG=$1
 INVOICE_ID=$2
 
-docker run --rm -v "$(pwd):/app" clientelle:latest $CLIENT_SLUG $INVOICE_ID
+docker run --rm -v "$(pwd):/app" clientele:latest $CLIENT_SLUG $INVOICE_ID
