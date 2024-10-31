@@ -159,7 +159,7 @@ Further customization can be done in the `templates/invoice.asciidoc` file.
 
 Here are some tips for using this platform:
 
-* Invoice records should be listed most recent to oldest -- or at least the current/latest should be the first in the list, so it can be generated without specifying an ID in the `./invoice.sh` command.
+* Invoice records should be listed most recent to oldest -- or at least the current/latest should be the first in the sequence, so it can be generated without specifying an ID in the `./invoice.sh` command.
 
 * Adding a `paid` property to an invoice's `dates` block will trigger the `-PAID` filename tag and the *PAID* stamp on the PDF version of the invoice.
 Registering `payments` will _not_ mark an invoice paid, even if the total is met.
