@@ -13,7 +13,7 @@ defaults:
   project: Web App Overhaul
   currency: CAD
   # date_format: "%Y-%m-%d" # See https://strftime.net
-  # item_date_format: "%m/%d" # https://strftime.net
+  # item_date_format: "%e/%d" # https://strftime.net
   # currency: USD
   # currency_symbol: "$"
   # project: Consulting
@@ -22,7 +22,7 @@ defaults:
     hourly:
       default: 150.00
       dev: 250.00
-      meeting: 175.00
+      meet: 175.00
     fixed:
       monthly: 300.00
       per-invoice: 5.00

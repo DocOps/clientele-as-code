@@ -72,12 +72,12 @@ s! Paid
 |====
 
 
-[cols="3,1,1,1,1", options="header", grid="rows"]
+[cols="1,7,1,1,2,2", options="header", grid="rows"]
 |===
-| Description
+2+| Description
 | Date
-| Quantity
-| Unit Price
+| #
+| Price
 | Total
 {%- assign subtotal = 0 %}
 {%- assign invoice_memo = invoice.memo %}
@@ -88,6 +88,7 @@ s! Paid
 {%- assign item_count = item.count | default: 1 %}
 {%- assign item_total = item_count | times: item_price %}
 {%- assign subtotal = subtotal | plus: item_total %}
+a| [small]#{{ item.type | default: "misc" | upcase }}#
 | {{ item.desc }}
 | {% if item.date %}{{ item.date | date: item_date_format }}{% else %}N/A{% endif %}
 | {{ item_count }}
@@ -97,34 +98,37 @@ s! Paid
 {% endfor %}
 {%- assign monthlies = invoice.items | where: "type", "monthly" %}
 {%- assign fixed_fees = invoice.items | where: "type", "per-invoice" | concat: monthlies %}
+{%- if fixed_fees.size > 0 %}
+2+h| Subtotal | | | | {{ currency_symbol }}{{ subtotal | format_decimal | number_delimited }}
 {% for item in fixed_fees %}
 {%- assign default_price = client.defaults.fees.fixed[item.type] | default: 0 %}
 {%- assign item_price = item.cost | default: default_price %}
 {%- assign item_count = item.count | default: 1 %}
 {%- assign item_total = item_count | times: item_price %}
 {%- assign subtotal = subtotal | plus: item_total %}
-| {{ item.desc }}
+2+| {{ item.desc }}
 | {% if item.date %}{{ item.date | date: item_date_format }}{% else %}N/A{% endif %}
 | {{ item_count }}
 | {{ item_price | format_decimal | number_delimited }}
 | {{ item_total | format_decimal | number_delimited }}
 {% endfor %}
+{%- endif %}
 
-4+h| Total | {{ currency_symbol }}{{ subtotal | format_decimal | number_delimited }}
+5+h| Total | {{ currency_symbol }}{{ subtotal | format_decimal | number_delimited }}
 
 {%- if invoice.payments %}
 {%-   assign payments_total = 0 %}
 {%-   for payment in invoice.payments %}
 {%-     assign payments_total = payments_total | plus: payment.amount %}
-h| Payment | {{ payment.date | date: date_format }}
+2+h| Payment 2+| {{ payment.date | date: date_format }}
 | {{ payment.method }}
-| | -{{ payment.amount | format_decimal | number_delimited }}
+| -{{ payment.amount | format_decimal | number_delimited }}
 {%-     assign invoice_memo = payment.memo | default: "" %}
 {%-   endfor %}
 {%-   assign balance_due = subtotal | minus: payments_total %}
-h| Balance Due | | | s| {{ currency_symbol }}{{ balance_due | format_decimal | number_delimited }}
+2+h| Balance Due | | | s| {{ currency_symbol }}{{ balance_due | format_decimal | number_delimited }}
 {%- elsif invoice.dates.paid %}
-h| Balance Due | | | s| {{ currency_symbol }}0.00
+2+h| Balance Due | | | s| {{ currency_symbol }}0.00
 {%- endif %}
 |===
 

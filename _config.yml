@@ -28,7 +28,7 @@ settings: # To customize, remove the first '#' mark from any line below AND chan
   # keep_asciidoc: true # false to remove .adoc source file generated for each invoice
   defaults:
   # date_format: "%Y-%m-%d" # See https://strftime.net
-  # item_date_format: "%m/%d" # https://strftime.net
+  # item_date_format: "%e/%m" # https://strftime.net
   #   currency: USD
   #   currency_symbol: "$"
   #   currency: CAD
