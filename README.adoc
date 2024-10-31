@@ -155,6 +155,23 @@ Uncomment and modify them as needed.
 
 Further customization can be done in the `templates/invoice.asciidoc` file.
 
+=== Usage Notes
+
+Here are some tips for using this platform:
+
+* Invoice records should be listed most recent to oldest -- or at least the current/latest should be the first in the list, so it can be generated without specifying an ID in the `./invoice.sh` command.
+
+* Adding a `paid` property to an invoice's `dates` block will trigger the `-PAID` filename tag and the *PAID* stamp on the PDF version of the invoice.
+Registering `payments` will _not_ mark an invoice paid, even if the total is met.
++
+[source,yaml]
+----
+dates:
+  sent: 2024-09-01
+  due: 2024-09-30
+  paid: 2024-09-15 # whenever this appears, the invoice is considered fully paid
+----
+
 === Integrate into Existing Directory (Advanced)
 
 If you already have a directory containing client directories, you can integrate this project into that structure.
@@ -173,23 +190,6 @@ Integration into an existing codebase/repo should be made far more elegant if th
 
 [NOTE]
 Remember to use `chmod +x invoice.sh` to make the script executable.
-
-=== Usage Notes
-
-Here are some tips for using this platform:
-
-* Invoice records should be listed most recent to oldest -- or at least the current/latest should be the first in the list, so it can be generated without specifying an ID in the `./invoice.sh` command.
-
-* Adding a `paid` property to an invoice's `dates` block will trigger the `-PAID` filename tag and the *PAID* stamp on the PDF version of the invoice.
-Registering `payments` will _not_ mark an invoice paid, even if the total is met.
-+
-[source,yaml]
-----
-dates:
-  sent: 2024-09-01
-  due: 2024-09-30
-  paid: 2024-09-15 # whenever this appears, the invoice is considered fully paid
-----
 
 
 == Development
