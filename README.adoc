@@ -15,7 +15,6 @@ toc::[]
 Here is what the Clientelle-as-Code project can already enable:
 
 * Store client metadata and payment/invoice records in a *YAML* file.
-* Track billable services and expenses in a *YAML* file.
 * Generate invoices from the YAML sources:
 ** *HTML* and *PDF* output formats
 ** *AsciiDoc* source files written automatically
