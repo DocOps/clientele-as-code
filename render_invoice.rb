@@ -86,7 +86,7 @@ provider_slug = "#{config['provider']['slug']}-" || ''
 output_base = "#{provider_slug}invoice-#{client_slug}-#{invoice_id}-#{date_issued}#{invoice_paid ? '-PAID' : ''}#{invoice_overdue ? '-OVERDUE' : ''}"
 output_html = "#{output_dir}/#{output_base}.html"
 output_pdf = "#{output_dir}/#{output_base}.pdf"
-keep_asciidoc = config['settings']['keep_asciidoc'] || true
+keep_asciidoc = config['settings']['keep_asciidoc'].nil? ? true : config['settings']['keep_asciidoc']
 
 # Ensure output directory exists
 FileUtils.mkdir_p(output_dir)
