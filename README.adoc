@@ -32,30 +32,30 @@ See the demo PDF artifacts:
 There are a few benefits of this approach that I have considered, though they are yet to be demonstrated in practice to be true advantages.
 
 source control:: Track all of your payments in Git.
-cost control:: It's free!
-total control:: You can customize and extend to your heart's content!
-AGI assist:: Use AI to help you fill out your invoices.
+cost control:: It's free! Forever.
+total control!:: You can customize and extend to your heart's content.
+GAI/GPT assist:: Use AI to help you fill out your invoices.
 
 Cloud and other premium software that helps you track work and perform invoicing can get very expensive.
 
 Filling out forms is less fun than letting a tool like GitHub Co-pilot help you write your invoices.
 
 *Free backup to GitHub*, GitLab, or your private Git repo host of choice -- or just backup to your backup.
-This is honestly more confidence, privacy, and security than most paid systems provide.
+This is *more confidence, privacy, and security* than most paid systems provide.
 
-=== Who is this For?
+=== Who is This For?
 
 While no real experience with the underlying technologies is required, this project will probably be most useful to people who already use Git and markup.
 
 If you want to *heavily customize* the invoice template, you will need to use Liquid, which is designed for non-programmers.
-This is also the only case in which you would need to know any AsciiDoc, and to be honest, AsciiDoc with Liquid markup mixed in is not the easiest way to learn either format if you are not already adept at using markup.
+This is also the only case in which you would need to know any AsciiDoc, and to be frank, AsciiDoc with Liquid markup mixed in is not the easiest way to learn either format if you are not already adept at using markup.
 
 The YAML files as currently implemented should be fairly intuitive for "`less-technical`" users.
-While they can be "`broken,`" so to speak, this whole system is "`high touch`" for users -- it does not automatically send anything to clients.
-If it's broken, you'll know it.
+While they can be "`broken,`" so to speak, this whole system is safe for novice users -- it does not automatically send anything to clients.
+If something is broken, you'll know it before your clients see anything.
 
-I am not sure if Clientelle-as-Code will make invoicing more *collaborative for large teams*, but my hope is that it will offer all the advantages that source-control systems have provided for collectively managing product codebases.
-One can imagine a situation where multiple workers at a firm can track their time on a given project, and an additional worker can handle the actual generating and management of invoices, all from a central repository.
+It's not yet clear if Clientelle-as-Code will make invoicing more *collaborative for large teams*, but my hope is that it will offer all the advantages that source-control systems have provided for collectively managing product codebases.
+I can imagine a situation where multiple workers at a firm can track their time on a given project, and an additional worker can handle the actual generating and management of invoices, all from a central repository.
 
 
 == Setup
@@ -122,13 +122,19 @@ Invoice `001` received multiple payments but was paid off.
 
 You'll need your own versions of the global `_config.yml` file, which reflects _your_ company details and configuration settings.
 
-To establish this, edit the `_config.yml` in the root directory.
+To establish this, *edit the `_config.yml` file* in the root directory.
 
 [NOTE]
 If you already have a `_config.yml` file in your root directory, you name the file `_invoices.yml`, or just add the `provider` and `settings` blocks from our `_config.yml` to your own, assuming they do not conflict.
 
 Then make a copy of the `clients/acme-corporation/` directory and modify it to meet your first client's specifics.
 
+. _If necessary_, make a client directory.
++
+ mkdir clients/your-client-id
+
+. Copy the data files from the example directory.
++
  cp -r clients/acme-corporation clients/your-client-id
 
 Be sure to change the `_client.yml` and `_payments.yml` files.
@@ -175,11 +181,11 @@ As mentioned, this is simply a proof-of-concept, mainly:
 
 . To demonstrate the various ways my preferred AYL DocStack (AsciiDoc, YAML, and Liquid) can be used to solve diverse documentation problems with a code-like, Git-friendly approach.
 
-. To see if it makes sense even for me to use on a regular basis to track my clients and their payments.
+. To see if it makes sense even for me to use on a regular basis to track my own clients and their payments.
 
 . Hopefully, to demonstrate how Docker can make docs-as-code projects more accessible.
 
-If you are interested in this project, give it a star and maybe post an Issue requesting a feature or fix that you need.
+_If you are interested in this project_, give it a star and maybe post an Issue requesting a feature or fix that you need.
 
 Here are the big changes I expect to make to this project if others really want to take advantage of it:
 
@@ -214,7 +220,7 @@ separate core source from demo content::
 Right now if you clone or fork this repo, your code will diverge as soon as you customize the `_config.yml` file or remove the `acme-corporation` directory.
 A proper release will separate those files while making quickstart demos still possible.
 
-best practices::
+better practices::
 * The `Gemfile.lock` file should be tracked rather than Git-ignored.
 * Gems should persist in a Docker named volume
 * Unit tests should be added to Ruby script.
