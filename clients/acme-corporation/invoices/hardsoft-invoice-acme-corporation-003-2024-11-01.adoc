@@ -58,26 +58,29 @@ s! Due
 |====
 
 
-[cols="3,1,1,1,1", options="header", grid="rows"]
+[cols="1,7,1,1,2,2", options="header", grid="rows"]
 |===
-| Description
+2+| Description
 | Date
-| Quantity
-| Unit Price
+| #
+| Price
 | Total
 
+a| [small]#MEET#
 | Design Review
 | 10/11
 | 1
 | 175.00
 | 175.00
 
+a| [small]#DEV#
 | Mobile App UI Design
 | N/A
 | 20
 | 250.00
 | 5,000.00
 
+a| [small]#DEV#
 | Backend API Development +
 PRs #123, #124, #125
 
@@ -86,12 +89,14 @@ PRs #123, #124, #125
 | 250.00
 | 10,000.00
 
+a| [small]#DEV#
 | Quality Assurance
 | N/A
 | 18
 | 250.00
 | 4,500.00
 
+a| [small]#MISC#
 | Travel reimbursement
 | 10/15
 | 1
@@ -100,21 +105,22 @@ PRs #123, #124, #125
 
 
 
+2+h| Subtotal | | | | $19,925.00
 
-| Processing fee
+2+| Processing fee
 | N/A
 | 1
 | 5.00
 | 5.00
 
-| Monthly retainer
+2+| Monthly retainer
 | N/A
 | 1
 | 300.00
 | 300.00
 
 
-4+h| Total | $20,230.00
+5+h| Total | $20,230.00
 |===
 == Memo
 

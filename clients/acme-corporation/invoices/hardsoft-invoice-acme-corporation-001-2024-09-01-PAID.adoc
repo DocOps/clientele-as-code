@@ -61,50 +61,57 @@ s! Paid
 |====
 
 
-[cols="3,1,1,1,1", options="header", grid="rows"]
+[cols="1,7,1,1,2,2", options="header", grid="rows"]
 |===
-| Description
+2+| Description
 | Date
-| Quantity
-| Unit Price
+| #
+| Price
 | Total
 
+a| [small]#MEET#
 | Kickoff Meeting
-|  1/08
+| 08/01
 | 1
 | 175.00
 | 175.00
 
+a| [small]#MEET#
 | Onboarding
-|  3/08
+| 08/03
 | 6
 | 175.00
 | 1,050.00
 
+a| [small]#MEET#
 | Design Review
-| 11/08
+| 08/11
 | 1
 | 175.00
 | 175.00
 
+a| [small]#DEV#
 | Website UI Design
 | N/A
 | 10
 | 250.00
 | 2,500.00
 
-| 
+a| [small]#DEV#
+| Backend API Development
 | N/A
 | 20
 | 250.00
 | 5,000.00
 
-| 
+a| [small]#DEV#
+| Quality Assurance
 | N/A
 | 8
 | 250.00
 | 2,000.00
 
+a| [small]#MISC#
 | Special work agreed on 8/15
 | N/A
 | 6
@@ -112,18 +119,17 @@ s! Paid
 | 2,100.00
 
 
-
-4+h| Total | $13,000.00
-h| Payment | 2024-09-12
+5+h| Total | $13,000.00
+2+h| Payment 2+| 2024-09-13
 | ACH
-| | -2,500.00
-h| Payment | 2024-09-20
+| -2,500.00
+2+h| Payment 2+| 2024-09-20
 | check
-| | -5,000.00
-h| Payment | 2024-08-29
+| -5,000.00
+2+h| Payment 2+| 2024-08-29
 | ACH
-| | -5,500.00
-h| Balance Due | | | s| $0.00
+| -5,500.00
+2+h| Balance Due | | | s| $0.00
 |===
 == Memo
 
