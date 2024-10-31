@@ -1,0 +1,158 @@
+= Hard Software Solutions LLC: Invoice
+:doctype: article
+:imagesdir: ../../../assets
+:page-foreground-image: image::paid-stamp.svg[pdfwidth=35%,fit=none,position=top]
+
+[cols="1,1", frame="none", grid="none"]
+|====
+a|
+
+[cols="1,3", grid="none", options="header"]
+!===
+2+! Client Information
+s! Name
+! Acme Corporation
+
+s! Address
+! 123 Business Way
+Suite 456
+Toronto, ON M1M 1M1
+
+
+s! Contact
+! Fred Flintstone
+
+s! Email
+! fredf@acmecorp.com
+
+s! Phone
+! 416-555-1234
+
+s! Currency
+! CAD
+!===
+
+a|
+
+[cols="1,3", grid="none"]
+!===
+2+! Invoice Details
+
+s! Invoice ID
+! 001
+
+s! Project
+! Web App Overhaul
+
+s! Issued
+! 2024-09-01
+
+s! Billing Period
+! 2024-08-01 - 2024-08-30
+
+s! Due
+! 2024-09-15
+
+
+s! Paid
+! 2024-09-29
+!===
+
+|====
+
+
+[cols="3,1,1,1,1", options="header", grid="rows"]
+|===
+| Description
+| Date
+| Quantity
+| Unit Price
+| Total
+
+| Kickoff Meeting
+|  1/08
+| 1
+| 175.00
+| 175.00
+
+| Onboarding
+|  3/08
+| 6
+| 175.00
+| 1,050.00
+
+| Design Review
+| 11/08
+| 1
+| 175.00
+| 175.00
+
+| Website UI Design
+| N/A
+| 10
+| 250.00
+| 2,500.00
+
+| 
+| N/A
+| 20
+| 250.00
+| 5,000.00
+
+| 
+| N/A
+| 8
+| 250.00
+| 2,000.00
+
+| Special work agreed on 8/15
+| N/A
+| 6
+| 350.00
+| 2,100.00
+
+
+
+4+h| Total | $13,000.00
+h| Payment | 2024-09-12
+| ACH
+| | -2,500.00
+h| Payment | 2024-09-20
+| check
+| | -5,000.00
+h| Payment | 2024-08-29
+| ACH
+| | -5,500.00
+h| Balance Due | | | s| $0.00
+|===
+== Memo
+
+All caught up! Thanks!
+
+
+== Payment Terms
+
+Thank you for your business.
+Payment is due within the specified terms.
+Late payments may be subject to additional fees.
+
+
+== Payment Instructions
+
+
+
+
+
+== Provider Information
+
+Contact::
+[horizontal]
+Email::: barney@hardsoftsolvers.io
+Phone::: 212-555-1212
+Billing::
+[horizontal]
+Email::: linda@hardsoftsolvers.io
+Phone::: 212-555-2121
+
+[horizontal]
+EIN:: 12-3456789
