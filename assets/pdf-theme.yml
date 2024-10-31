@@ -1,0 +1,8 @@
+extends: default
+heading:
+  font_style: bold
+  min-height-after: auto
+  h1:
+    font_size: $base-font-size * 2
+  h2:
+    font_size: $base-font-size * 1.3

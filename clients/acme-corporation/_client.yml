@@ -1,0 +1,28 @@
+name: Acme Corporation
+address: |
+  123 Business Way
+  Suite 456
+  Toronto, ON M1M 1M1
+contact:
+  name: Fred Flintstone
+  email: fredf@acmecorp.com
+phone: 416-555-1234
+po: PO-90210
+# payment_terms: Net 30
+defaults:
+  project: Web App Overhaul
+  currency: CAD
+  # date_format: "%Y-%m-%d" # See https://strftime.net
+  # item_date_format: "%m/%d" # https://strftime.net
+  # currency: USD
+  # currency_symbol: "$"
+  # project: Consulting
+  # currency: CAD
+  fees:
+    hourly:
+      default: 150.00
+      dev: 250.00
+      meeting: 175.00
+    fixed:
+      monthly: 300.00
+      per-invoice: 5.00

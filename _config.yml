@@ -1,0 +1,42 @@
+provider: # This is YOU
+  company: Hard Software Solutions LLC
+  slug: hardsoft
+  address: |
+    1234 Elm Street +
+    Suite 567 +
+    Anytown, NY 13579
+  contact:
+    name: Barney Trouble
+    email: barney@hardsoftsolvers.io
+    phone: 212-555-1212
+  billing:
+    name: Linda Gladstone
+    email: linda@hardsoftsolvers.io
+    phone: 212-555-2121
+  ein: 12-3456789
+  payment_terms: |
+    Thank you for your business.
+    Payment is due within the specified terms.
+    Late payments may be subject to additional fees.
+  # payment_instructions:
+
+settings: # To customize, remove the first '#' mark from any line below AND change the value
+  # invoice_tables_layout: horizontal # vertical or horizontal
+  # clients_dir: clients # path relative to invoice project root
+  # payments_path: _payments.yml # path relative to client directory
+  # output_dir: invoices # path relative to client directory where invoice are generated
+  # keep_asciidoc: true # false to remove .adoc source file generated for each invoice
+  defaults:
+  # date_format: "%Y-%m-%d" # See https://strftime.net
+  # item_date_format: "%m/%d" # https://strftime.net
+  #   currency: USD
+  #   currency_symbol: "$"
+  #   currency: CAD
+  #   fees:
+  #     hourly:
+  #       default: 0.00
+  #       meeting: 0.00
+  #       admin:   0.00
+  #     fixed:
+  #       monthly: 0.00
+  #       per-invoice: 0.00
