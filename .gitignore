@@ -1,2 +1,10 @@
-Gemfile.lock
+# Ignore everything
+/*
 
+# But not these directories and their contents
+!.gitignore
+!clients/
+clients/*
+!clients/acme-corporation/
+clients/acme-corporation/*
+!clients/acme-corporation/invoices
