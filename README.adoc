@@ -78,14 +78,20 @@ Docker requires a proper Unix-like environment, so either MacOS or Windows with 
 
 === Installation
 
-. Navigate to your main (global) work projects directory.
+. Navigate to your main (global) work projects directory in your terminal application.
 +
 .Example
  cd ~/Documents/work/projects
 
-. Clone the repository.
+. Get this repository
+
+.. Clone the repo with Git.
 +
  git clone https://github.com/DocOps/clientele-as-code.git invoices
+
+.. Download the ZIP file and extract it.
++
+ curl -L https://github.com/DocOps/clientele-as-code/archive/refs/heads/main.zip -o clientele-as-code.zip && unzip clientele-as-code.zip && mv clientele-as-code-main invoices && rm clientele-as-code.zip
 
 . Change to the project directory.
 +
@@ -94,10 +100,6 @@ Docker requires a proper Unix-like environment, so either MacOS or Windows with 
 . Build the Docker image.
 +
  docker build -t clientele:latest .
-
-. Make the `invoice.sh` script executable.
-+
- chmod +x invoice.sh
 
 === Demo Procedure
 
@@ -108,6 +110,9 @@ Test the procedure using the sample data provided.
  ./invoice.sh acme-corporation
 +
 This generates the _latest_ invoice to the path `clients/acme-corporation/generated/` in AsciiDoc (`.adoc`), HTML5 (`.html`) and PDF (`.pdf`) formats.
++
+[NOTE]
+If this step does not work, you may need to run `chmod +x invoice.sh` to make the script executable.
 
 . Try it with a specific (previous) invoice ID.
 +
@@ -136,8 +141,6 @@ Then make a copy of the `clients/acme-corporation/` directory and modify it to m
 +
  cp -r clients/acme-corporation clients/your-client-id
 
-Be sure to change the `_client.yml` and `_payments.yml` files.
-
 === Generate an Invoice
 
 With your source files customized, you can run the script to build invoices for your client.
@@ -157,6 +160,8 @@ Further customization can be done in the `templates/invoice.asciidoc` file.
 === Usage Notes
 
 Here are some tips for using this platform:
+
+* If you are brand new to YAML, check out this link:https://www.educative.io/blog/yaml-tutorial[introductory article] or this link:https://www.youtube.com/watch?v=BEki_rsWu4E&t=73s[intro video].
 
 * Invoice records should be listed most recent to oldest -- or at least the current/latest should be the first in the sequence, so it can be generated without specifying an ID in the `./invoice.sh` command.
 
