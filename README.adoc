@@ -129,7 +129,7 @@ You'll need your own versions of the global `_config.yml` file, which reflects _
 To establish this, *edit the `_config.yml` file* in the root directory.
 
 [NOTE]
-If you already have a `_config.yml` file in your root directory, you name the file `_invoices.yml`, or just add the `provider` and `settings` blocks from our `_config.yml` to your own, assuming they do not conflict.
+If you already have a `_config.yml` file in your root directory, you may name the file `_invoices.yml`, or just add the `provider` and `settings` blocks from our `_config.yml` to your own, assuming they do not conflict.
 
 Then make a copy of the `clients/acme-corporation/` directory and modify it to meet your first client's specifics.
 
@@ -140,6 +140,8 @@ Then make a copy of the `clients/acme-corporation/` directory and modify it to m
 . Copy the data files from the example directory.
 +
  cp -r clients/acme-corporation clients/your-client-id
+
+Alternatively, you an just rename the directory and edit the files in place, if you don't care to keep a copy of the example data.
 
 === Generate an Invoice
 
@@ -188,12 +190,9 @@ If your existing directory is _not_ already a Git repository, you can clone the 
 Download and extract to local::
 If you just want to add these files to an existing repository, be sure changes are committed and/or the path is backed up:
 +
- wget https://github.com/DocOps/clientele-as-code/archive/refs/heads/main.zip && unzip main.zip && mv clientele-as-code-main/* . && rm -rf clientele-as-code-main main.zip README.adoc spec
+ curl -L https://github.com/DocOps/clientele-as-code/archive/refs/heads/main.zip -o clientele-as-code.zip && unzip clientele-as-code.zip && mv clientele-as-code-main/* . && rm -rf clientele-as-code-main clientele-as-code.zip README.adoc spec
 
 Integration into an existing codebase/repo should be made far more elegant if this project is released as a proper Ruby gem (see <<development>>).
-
-[NOTE]
-Remember to use `chmod +x invoice.sh` to make the script executable.
 
 
 == Development
