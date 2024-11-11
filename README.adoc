@@ -124,7 +124,7 @@ Invoice `001` received multiple payments but was paid off.
 
 === Customize Data Source Files
 
-You'll need your own versions of the global `_config.yml` file, which reflects _your_ company details and configuration settings.
+You'll need your own versions of the global `_config.yml` file, which reflects your company details and configuration settings.
 
 To establish this, *edit the `_config.yml` file* in the root directory.
 
