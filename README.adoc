@@ -83,7 +83,7 @@ Docker requires a proper Unix-like environment, so either MacOS or Windows with 
 .Example
  cd ~/Documents/work/projects
 
-. Get this repository
+. Get this repository using _either_ of these methods:
 
 .. Clone the repo with Git.
 +
